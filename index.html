@@ -36,10 +36,10 @@
 
       <!-- Navigation links (Left/Center) -->
       <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="#perfumes" class="nav-link" data-section="perfumes">Perfumes</a>
         <a href="#joyeria" class="nav-link" data-section="joyeria">Joyería</a>
         <a href="#prendas" class="nav-link" data-section="prendas">Prendas</a>
         <a href="#calzado" class="nav-link" data-section="calzado">Calzado</a>
-        <a href="#perfumes" class="nav-link" data-section="perfumes">Perfumes</a>
         <a href="#accesorios" class="nav-link" data-section="accesorios">Accesorios</a>
       </nav>
 
@@ -65,10 +65,10 @@
   <!-- ══ MOBILE DRAWER OVERLAY (Zara style full-screen menu) ══ -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
     <nav class="mobile-nav">
+      <a href="#perfumes" class="mobile-nav-link">Perfumes</a>
       <a href="#joyeria" class="mobile-nav-link">Joyería</a>
       <a href="#prendas" class="mobile-nav-link">Prendas</a>
       <a href="#calzado" class="mobile-nav-link">Calzado</a>
-      <a href="#perfumes" class="mobile-nav-link">Perfumes</a>
       <a href="#accesorios" class="mobile-nav-link">Accesorios</a>
       <a href="#contacto" class="mobile-nav-link mobile-nav-cta">Contacto</a>
     </nav>
@@ -87,7 +87,7 @@
             Una colección curada de joyería, prendas, calzado y accesorios originales. Lujo contemporáneo directo a tu puerta.
           </p>
           <div class="hero-actions-container">
-            <a href="#prendas" class="btn-primary" id="heroCta">Explorar Catálogo</a>
+            <a href="#perfumes" class="btn-primary" id="heroCta">Explorar Catálogo</a>
             <a href="#contacto" class="btn-secondary">Contáctanos</a>
           </div>
         </div>
@@ -101,10 +101,35 @@
   <!-- ══ CATALOG ══ -->
   <main class="catalog" id="catalog">
 
-    <!-- JOYERÍA -->
-    <section class="catalog-section" id="joyeria">
+    <!-- PERFUMES (Principal) -->
+    <section class="catalog-section" id="perfumes">
       <div class="section-header">
-        <span class="section-label">01 / JOYAS Y RELOJES</span>
+        <span class="section-label">01 / FRAGRANCES</span>
+        <h2 class="section-title">Perfumes</h2>
+        <div class="gender-tabs" id="tabs-perfumes">
+          <button class="tab-btn active" data-cat="perfumes" data-gender="mujer">Mujer</button>
+          <span class="tab-divider">/</span>
+          <button class="tab-btn" data-cat="perfumes" data-gender="hombre">Hombre</button>
+        </div>
+      </div>
+      <div class="products-grid" id="grid-perfumes-mujer">
+        <div class="product-placeholder">
+          <div class="placeholder-icon">🌸</div>
+          <p>Cargando fragancias...</p>
+        </div>
+      </div>
+      <div class="products-grid hidden" id="grid-perfumes-hombre">
+        <div class="product-placeholder">
+          <div class="placeholder-icon">🧴</div>
+          <p>Cargando fragancias...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOYERÍA -->
+    <section class="catalog-section alt-bg" id="joyeria">
+      <div class="section-header">
+        <span class="section-label">02 / JOYAS Y RELOJES</span>
         <h2 class="section-title">Joyería</h2>
         <div class="gender-tabs" id="tabs-joyeria">
           <button class="tab-btn active" data-cat="joyeria" data-gender="mujer">Mujer</button>
@@ -128,9 +153,9 @@
     </section>
 
     <!-- PRENDAS -->
-    <section class="catalog-section alt-bg" id="prendas">
+    <section class="catalog-section" id="prendas">
       <div class="section-header">
-        <span class="section-label">02 / OUTWEAR & APPAREL</span>
+        <span class="section-label">03 / OUTWEAR & APPAREL</span>
         <h2 class="section-title">Prendas</h2>
         <div class="gender-tabs" id="tabs-prendas">
           <button class="tab-btn active" data-cat="prendas" data-gender="mujer">Mujer</button>
@@ -153,9 +178,9 @@
     </section>
 
     <!-- CALZADO -->
-    <section class="catalog-section" id="calzado">
+    <section class="catalog-section alt-bg" id="calzado">
       <div class="section-header">
-        <span class="section-label">03 / FOOTWEAR</span>
+        <span class="section-label">04 / FOOTWEAR</span>
         <h2 class="section-title">Calzado</h2>
         <div class="gender-tabs" id="tabs-calzado">
           <button class="tab-btn active" data-cat="calzado" data-gender="mujer">Mujer</button>
@@ -173,31 +198,6 @@
         <div class="product-placeholder">
           <div class="placeholder-icon">👟</div>
           <p>Cargando calzado...</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PERFUMES -->
-    <section class="catalog-section alt-bg" id="perfumes">
-      <div class="section-header">
-        <span class="section-label">04 / FRAGRANCES</span>
-        <h2 class="section-title">Perfumes</h2>
-        <div class="gender-tabs" id="tabs-perfumes">
-          <button class="tab-btn active" data-cat="perfumes" data-gender="mujer">Mujer</button>
-          <span class="tab-divider">/</span>
-          <button class="tab-btn" data-cat="perfumes" data-gender="hombre">Hombre</button>
-        </div>
-      </div>
-      <div class="products-grid" id="grid-perfumes-mujer">
-        <div class="product-placeholder">
-          <div class="placeholder-icon">🌸</div>
-          <p>Cargando fragancias...</p>
-        </div>
-      </div>
-      <div class="products-grid hidden" id="grid-perfumes-hombre">
-        <div class="product-placeholder">
-          <div class="placeholder-icon">🧴</div>
-          <p>Cargando fragancias...</p>
         </div>
       </div>
     </section>
@@ -283,10 +283,10 @@
         <p class="footer-slogan">Artículos Originales de Diseñador</p>
       </div>
       <nav class="footer-nav" aria-label="Navegación pie de página">
+        <a href="#perfumes">Perfumes</a>
         <a href="#joyeria">Joyería</a>
         <a href="#prendas">Prendas</a>
         <a href="#calzado">Calzado</a>
-        <a href="#perfumes">Perfumes</a>
         <a href="#accesorios">Accesorios</a>
       </nav>
       <div class="footer-copy">
