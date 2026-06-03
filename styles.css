@@ -596,6 +596,47 @@ button {
   display: none !important; 
 }
 
+/* Mobile 2-column masonry grid */
+@media (max-width: 850px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  /* Staggered masonry effect: alternate tall/short */
+  .products-grid .product-card:nth-child(odd) .product-img-wrap {
+    aspect-ratio: 3/4;
+  }
+
+  .products-grid .product-card:nth-child(even) .product-img-wrap {
+    aspect-ratio: 2/3;
+  }
+
+  /* Offset second column downward for stagger */
+  .products-grid .product-card:nth-child(even) {
+    margin-top: 1.5rem;
+  }
+
+  .product-info {
+    padding: 0.6rem 0 0;
+  }
+
+  .product-brand {
+    font-size: 0.58rem;
+  }
+
+  .product-name {
+    font-size: 0.88rem;
+    line-height: 1.25;
+  }
+
+  .product-price {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+}
+
 /* Product Card (Flat, Borderless Zara / Dutti Style) */
 .product-card {
   display: flex;
@@ -1139,6 +1180,12 @@ button {
   .search-results-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.5rem 1rem;
+    align-items: start;
+  }
+
+  /* No stagger for search grid */
+  .search-results-grid .product-card:nth-child(even) {
+    margin-top: 0 !important;
   }
   
   .search-results-grid .product-name {
@@ -1499,8 +1546,9 @@ button {
   }
 
   .products-grid {
-    grid-template-columns: 1fr; /* Single column on very small phones */
-    gap: 2.5rem 0;
+    /* Single column only on very small phones (portrait) when needed */
+    /* Keeping 2-col masonry from 850px breakpoint above */
+    gap: 0.6rem;
   }
 
   .contact-method {
